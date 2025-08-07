@@ -1,4 +1,4 @@
-# 💵 Consulta de Cotação do Dólar com API ExchangeRate
+# 💵 Cotação do Dólar com API ExchangeRate
 
 Este projeto consulta a cotação atual do dólar (USD) em relação ao real (BRL), utilizando a API da ExchangeRate. O script `consulta.py` realiza uma requisição HTTP à API e imprime o valor atualizado no terminal.
 
@@ -17,19 +17,19 @@ Este projeto consulta a cotação atual do dólar (USD) em relação ao real (BR
 ### 1. Clone o repositório ou baixe os arquivos
 
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
+git clone https://github.com/onoderagustavo/API-venv.git
+cd API-venv
 ```
 
-### 2. (Opcional) Crie e ative um ambiente virtual
+### 2. (Opcional, mas recomendado) Crie e ative um ambiente virtual
 
 ```bash
-python -m venv venv_nome
+python -m venv venv_seunome
 ```
 
 - **Windows:**
   ```bash
-  venv_nome\Scripts\activate
+  venv_seunome\Scripts\activate
   ```
 
 - **macOS/Linux:**
