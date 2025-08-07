@@ -1,48 +1,85 @@
-# 💸 Cotação de Moedas com Python
+# 💵 Consulta de Cotação do Dólar com API ExchangeRate
 
-Projeto em Python para consultar a cotação do dólar (USD) em relação a outras moedas, utilizando a ExchangeRate API.  
-Foi desenvolvido com boas práticas: variáveis de ambiente (.env), virtualenv, versionamento com Git e organização simples.
-
----
-
-## 🚀 Como rodar este projeto
-
-1. Acesse o site https://www.exchangerate-api.com/  
-   Clique em "Get Free API Key", crie uma conta gratuita e copie sua chave de API.
-
-2. Clone este repositório no seu computador com:  
-   git clone https://github.com/seu-usuario/API-venv.git  
-   Entre na pasta do projeto com:  
-   cd API-venv
-
-3. Crie um ambiente virtual com o comando:  
-   python -m venv venv
-
-4. Ative o ambiente virtual:  
-   No Windows: venv\Scripts\activate  
-   No Linux/macOS: source venv/bin/activate
-
-5. Instale as dependências necessárias com:  
-   pip install -r requirements.txt
-
-6. Crie um arquivo chamado `.env` na raiz do projeto com o seguinte conteúdo:  
-   API_KEY=sua_chave_aqui  
-   (Substitua "sua_chave_aqui" pela chave real que você obteve no passo 1)
-
-7. Execute o programa com o comando:  
-   python consulta.py
-
-O terminal exibirá a cotação do dólar em relação ao real (BRL), euro (EUR), libra esterlina (GBP) e iene japonês (JPY).
+Este projeto consulta a cotação atual do dólar (USD) em relação ao real (BRL), utilizando a API da ExchangeRate. O script `consulta.py` realiza uma requisição HTTP à API e imprime o valor atualizado no terminal.
 
 ---
 
-## 📁 Arquivos importantes
+## ✔️ Requisitos
 
-- `consulta.py`: Script principal do projeto.
-- `.env.example`: Modelo do arquivo `.env`, não contém chave.
-- `.gitignore`: Configurado para ignorar o `.env`, `venv/` e caches.
-- `requirements.txt`: Lista de dependências do projeto.
+- Python 3 instalado  
+- Ambiente virtual configurado (recomendado)  
+- Chave de API da ExchangeRate (definida no arquivo `.env`)
 
 ---
 
-Projeto simples, prático e útil para treinar consumo de APIs e boas práticas com Python. ✅
+## 🚀 Como executar
+
+### 1. Clone o repositório ou baixe os arquivos
+
+```bash
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+cd nome-do-repositorio
+```
+
+### 2. (Opcional) Crie e ative um ambiente virtual
+
+```bash
+python -m venv venv_nome
+```
+
+- **Windows:**
+  ```bash
+  venv_nome\Scripts\activate
+  ```
+
+- **macOS/Linux:**
+  ```bash
+  source venv_nome/bin/activate
+  ```
+
+### 3. Instale as dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Configure o arquivo `.env`
+
+Crie um arquivo `.env` na raiz do projeto (caso ainda não exista) e insira sua chave da API:
+
+```
+API_KEY=sua_chave_aqui
+```
+
+> ⚠️ **Importante:** Não compartilhe sua chave de API publicamente.
+
+### 5. Execute o script
+
+```bash
+python consulta.py
+```
+
+O terminal mostrará a cotação atual de 1 dólar em reais.
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+├── consulta.py         # Script principal que realiza a requisição à API
+├── requirements.txt    # Lista de dependências
+├── .env                # Arquivo de configuração com a chave da API
+└── README.md           # Documentação do projeto
+```
+
+---
+
+## 🔒 Segurança com .env
+
+O uso do arquivo `.env` ajuda a manter informações sensíveis, como a chave da API, fora do código-fonte. É recomendável adicionar `.env` ao `.gitignore` para evitar o versionamento desse arquivo.
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença [MIT](https://choosealicense.com/licenses/mit/). Sinta-se livre para usar, modificar e distribuir conforme necessário.
